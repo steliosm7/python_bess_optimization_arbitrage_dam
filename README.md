@@ -3,27 +3,27 @@
 ### 📖 Overview
 This repository presents the core methodology and financial results of the research paper **"Assessing the economic feasibility of Li-ion batteries storage systems for electricity arbitrage: A case study of the Greek energy market"**, published in *Next Research (Elsevier)*. 
 
-[cite_start]The study evaluates the viability of a 24 MW / 24 MWh Lithium-Ion Battery Energy Storage System (BESS) participating in the Greek Day-Ahead Market (DAM) under the EU Target Model[cite: 19, 408].
+[cite_start]The study evaluates the viability of a 24 MW / 24 MWh Lithium-Ion Battery Energy Storage System (BESS) participating in the Greek Day-Ahead Market (DAM) under the EU Target Model.
 
 📄 **[Read the full paper here]((https://www.sciencedirect.com/science/article/pii/S3050475924001088))**
 
 ### ⚙️ Methodology & Tech Stack
-[cite_start]To determine the optimal charging and discharging scheduling, a deterministic **Linear Programming (LP)** optimization model was developed using Python's **PuLP** library. [cite_start]The algorithm maximizes daily arbitrage revenue under perfect market foresight, subject to specific technical and operational constraints[cite: 416, 417, 468, 471].
+[cite_start]To determine the optimal charging and discharging scheduling, a deterministic **Linear Programming (LP)** optimization model was developed using Python's **PuLP** library. [cite_start]The algorithm maximizes daily arbitrage revenue under perfect market foresight, subject to specific technical and operational constraints.
 
 #### Mathematical Formulation (Objective Function)
 The core objective is to maximize the daily revenue ($K_{day}$):
 $$\max K_{day} = \sum_{t=1}^{24} (P_{d,t} \cdot T_{t} - P_{c,t} \cdot T_{t})$$
-[cite_start]Where $P_{d,t}$ and $P_{c,t}$ represent the discharge and charge power (MW) at hour $t$, and $T_{t}$ is the DAM clearing price (€/MWh)[cite: 477, 478].
+[cite_start]Where $P_{d,t}$ and $P_{c,t}$ represent the discharge and charge power (MW) at hour $t$, and $T_{t}$ is the DAM clearing price (€/MWh).
 
 #### System Constraints
-* [cite_start]**Power Limits:** $0 \le P_{d,t} \le P_{nom}$ and $0 \le P_{c,t} \le P_{nom}$ (where $P_{nom} = 24$ MW)[cite: 481, 483, 484].
-* [cite_start]**Energy Capacity:** The State of Charge (SOC) is strictly bounded by the nominal capacity ($C_{nom} = 24$ MWh)[cite: 485].
-* [cite_start]**Cycle Efficiency:** A round-trip efficiency ($\eta$) of 90% is applied[cite: 380, 487].
+* [cite_start]**Power Limits:** $0 \le P_{d,t} \le P_{nom}$ and $0 \le P_{c,t} \le P_{nom}$ (where $P_{nom} = 24$ MW).
+* [cite_start]**Energy Capacity:** The State of Charge (SOC) is strictly bounded by the nominal capacity ($C_{nom} = 24$ MWh).
+* [cite_start]**Cycle Efficiency:** A round-trip efficiency ($\eta$) of 90% is applied.
 
 ### 📊 Operational Strategy
-[cite_start]The LP model effectively identifies price spreads[cite: 471, 701]. The analysis of a 2-cycle per day strategy reveals a clear operational pattern:
-1. [cite_start]**Charging:** Predominantly during the early morning (03:00-04:00) and midday (13:00-14:00) due to high PV generation lowering prices[cite: 584, 585].
-2. [cite_start]**Discharging:** Focused strictly on the evening peak hours (19:00-21:00) to capture maximum market value[cite: 586].
+[cite_start]The LP model effectively identifies price spreads. The analysis of a 2-cycle per day strategy reveals a clear operational pattern:
+1. [cite_start]**Charging:** Predominantly during the early morning (03:00-04:00) and midday (13:00-14:00) due to high PV generation lowering prices.
+2. [cite_start]**Discharging:** Focused strictly on the evening peak hours (19:00-21:00) to capture maximum market value.
 
 *(See dispatch profile example below)*
 ![BESS Dispatch Profile Example](./dispatch_profile.png)
