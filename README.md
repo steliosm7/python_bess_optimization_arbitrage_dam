@@ -5,7 +5,7 @@ This repository presents the core methodology and financial results of the resea
 
 The study evaluates the viability of a 24 MW / 24 MWh Lithium-Ion Battery Energy Storage System (BESS) participating in the Greek Day-Ahead Market (DAM) under the EU Target Model.
 
-📄**[Read the full paper on ScienceDirect](https://www.sciencedirect.com/science/article/pii/S3050475924001088)****
+📄**[Read the full paper on ScienceDirect](https://www.sciencedirect.com/science/article/pii/S3050475924001088)**
 
 ### ⚙️ Methodology & Tech Stack
 To determine the optimal charging and discharging scheduling, a deterministic **Linear Programming (LP)** optimization model was developed using Python's **PuLP** library. The algorithm maximizes daily arbitrage revenue under perfect market foresight, subject to specific technical and operational constraints.
