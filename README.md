@@ -1,13 +1,13 @@
 # Economic Feasibility of BESS for Electricity Arbitrage: Greek Market Case Study
 
-### 📖 Overview
+### Overview
 This repository presents the core methodology and financial results of the research paper **"Assessing the economic feasibility of Li-ion batteries storage systems for electricity arbitrage: A case study of the Greek energy market"**, published in *Next Research (Elsevier)*. 
 
 The study evaluates the viability of a 24 MW / 24 MWh Lithium-Ion Battery Energy Storage System (BESS) participating in the Greek Day-Ahead Market (DAM) under the EU Target Model.
 
-📄**[Read the full paper on ScienceDirect](https://www.sciencedirect.com/science/article/pii/S3050475924001088)**
+**[Read the full paper on ScienceDirect](https://www.sciencedirect.com/science/article/pii/S3050475924001088)**
 
-### ⚙️ Methodology & Tech Stack
+###  Methodology & Tech Stack
 To determine the optimal charging and discharging scheduling, a deterministic **Linear Programming (LP)** optimization model was developed using Python's **PuLP** library. The algorithm maximizes daily arbitrage revenue under perfect market foresight, subject to specific technical and operational constraints.
 
 #### Mathematical Formulation (Objective Function)
@@ -30,7 +30,7 @@ The LP model effectively identifies price spreads. The analysis of a 2-cycle per
 
 ![Charging and Discharging Strategy](./charging_strategy.png)
 
-### 💶 Financial Results & Viability
+###  Financial Results & Viability
 The techno-economic assessment considers CAPEX, OPEX, degradation (battery replacement at year 10), and the current Greek state support schemes (Investment and Operational aid) over a 20-year lifetime.
 
 While pure arbitrage revenues alone do not overcome the levelized cost of storage (LCOS), the integration of existing government support mechanisms makes the investment highly viable.
